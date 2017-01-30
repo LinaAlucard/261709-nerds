@@ -7,21 +7,23 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
-      <div class="main-logo">
-        <img src="img/nerds-logo.png" width="160" height="65" alt="логотип">
-      </div>    
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">студия</a></li>
+    <div class="container clearfix">
+      <div class="main">
+        <a href="" class="main-logo">
+          <img src="img/nerds-logo.png" width="160" height="65" alt="логотип">
+        </a>    
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">студия</a></li>
             <li><a href="#">клиенты</a></li>
             <li><a href="#">магазин</a></li>
             <li><a href="#">контакты</a></li>
             <li><a href="#">корзина</a></li>
-        </ul>    
-      </nav> 
+          </ul>    
+        </nav>
+      </div>   
       <div class="main-block">
-        <h1>Долго, дорого, скурпулёзно.</h1>
+        <span class="main-title">Долго, дорого, скурпулёзно.</span>
         <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
         <a href="" class="btn">узнать больше</a>
       </div>   
@@ -34,60 +36,62 @@
   </header> 
   <section class="features">
     <div class="container">  
-      <div>  
+      <div class="features-all">  
         <div class="features-item">
           <img src="img/illustration-1.jpg" width="300" height="146" alt="иллюстрация">
-          <b>веб-сайты</b>
+          <h2>веб-сайты</h2>
           <p>Мир никогда не будет прежним после того как увидит наш сайт!</p>
           <a href="" class="btn">заказать</a>
         </div>    
         <div class="features-item">
           <img src="img/illustration-2.jpg" width="300" height="146" alt="иллюстрация">
-          <b>приложения</b>
+          <h2>приложения</h2>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="#" class="btn btn-green">заказать</a>
         </div> 
         <div class="features-item">
           <img src="img/illustration-3.jpg" width="300" height="146" alt="иллюстрация">
-          <b>презентации</b>
+          <h2>презентации</h2>
           <p>Вы даже не подозреваете, на сколько вы изумительны!</p>
           <a href="" class="btn btn-yellow">заказать</a>
         </div>    
       </div>
-      <div>  
-        <div class="features-aboutus">
-          <h2>Мы-маленькая, но гордая дизайн-студия из краснодара.</h2>
-          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
-          <strong>выполняем заказы на разработку:</strong>
-          <ul>
-            <li>Веб-сайтов любой сложности</li>
-            <li>Мобильных приложений для iOS и Android</li>
-            <li>Слайдшоу и видео для корпоративных презентаций</li>
-          </ul>    
-        </div>
-        <div class="features-work">
-          <div class="features-logo">
-            <img src="img/nerds-illustration.jpg" width="360" height="208" alt="логотип">
+      <div> 
+        <div class="features-another">
+          <div class="features-aboutus">
+            <p><b>Мы-маленькая, но гордая дизайн-студия из краснодара.</b><p>
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
+            <strong>выполняем заказы на разработку:</strong>
+            <ul>
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>    
           </div>
-          <b>с 2004 года любим точность во всём:</b>
-          <ul>
-            <li>
-              <b>146<sup>%</sup></b>
-              <p>Уровень самоотдачи</p>
-            </li>
-            <li>
-              <b>100<sup>%</sup></b>
-              <p>Соблюдение сроков</p>
-            </li>
-            <li>
-              <b>50<sup>%</sup></b>
-              <p>Минимальная предоплата</p>
-            </li>
-          </ul>    
+          <div class="features-work">
+            <div class="features-logo">
+              <img src="img/nerds-illustration.jpg" width="360" height="208" alt="логотип">
+            </div>
+            <b>с 2004 года любим точность во всём:</b>
+            <ul>
+              <li>
+                <b>146<sup>%</sup></b>
+                <p>Уровень самоотдачи</p>
+              </li>
+              <li>
+                <b>100<sup>%</sup></b>
+                <p>Соблюдение сроков</p>
+              </li>
+              <li>
+                <b>50<sup>%</sup></b>
+                <p>Минимальная предоплата</p>
+              </li>
+            </ul>    
+          </div>
         </div>
-      </div>    
+      </div>      
       <div class="features-compay">
-        <div class="company-academy">
+        <div class="company company-academy">
           <a href=""><img src="img/logo-1.png" width="199" height="68" alt="htmlacademy"></a>
         </div>
         <div class="company-borodinski">
@@ -103,27 +107,32 @@
     </div>      
   </section> 
   <div class="map">
-    <div class="container">
+    <div class="container clearfix">
       <div class="map-adress">
         <strong>nёrds design studio</strong>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшеннаяб д. 19/8</p>
+        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <span>тел. +7(812)275-75-75</span>
         <a href="" class="btn">напишите нам</a>
-      </div>    
+      </div>   
+      <div class="map-marker">
+        <img src="img/map-marker.png" width="231" hight="190" alt="маркер">
+      </div> 
     </div>  
   </div>  
   <footer>
-    <div class="conteiner">
-      <div class="footer-social">
-        <a href="#">Вконтакте</a>
-        <a href="#">Фейсбук</a>
-        <a href="#">Инстаграм</a>
-      </div>   
-      <div class="footer-info">
-        <h3>Давайте дружить, это выгодно!</h3>
-        <p>Скидка 10% для друзей из социальных сетей!</p>
-      </div>      
-    </div>    
+    <div class="conteiner clearfix">
+      <div class="footer-all">
+        <div class="footer-social">
+          <a href="#">Вконтакте</a>
+          <a href="#">Фейсбук</a>
+          <a href="#">Инстаграм</a>
+        </div>   
+        <div class="footer-info">
+          <h3>Давайте дружить, это выгодно!</h3>
+          <p>Скидка 10% для друзей из социальных сетей!</p>
+        </div>      
+      </div>
+    </div>      
   </footer>    
 </body>
 </html>

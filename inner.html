@@ -7,18 +7,20 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
-      <a htef="index.html" class="main-logo"><img src="img/nerds-logo.png" width="160" height="65" alt="логотип"></a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#">студия</a></li>
-          <li><a href="#">клиенты</a></li>
-          <li><a href="#">магазин</a></li>
-          <li><a href="#">контакты</a></li>
-          <li><a href="#">корзина</a></li>
-        </ul>    
-      </nav> 
-      <div class="main-inerblock">
+    <div class="container clearfix">
+      <div class="main-inner">
+        <a htef="index.html" class="inner-main-logo"><img src="img/nerds-logo.png" width="160" height="65" alt="логотип"></a>
+        <nav class="inner-main-nav">
+          <ul>
+            <li><a href="#">студия</a></li>
+            <li><a href="#">клиенты</a></li>
+            <li><a href="#">магазин</a></li>
+            <li><a href="#">контакты</a></li>
+            <li><a href="#">корзина</a></li>
+          </ul>    
+        </nav>
+      </div>   
+      <div class="main-innerblock">
         <h1>добро пожаловать в магазин готовых макетов</h1>
       </div>      
     </div>    
@@ -26,24 +28,29 @@
   <div class="catalog">
     <div class="container">
       <aside>
-        <form action="#" method="post">
-          <div class="catalog-cost">
-            <strong>стоимость:</strong><!--не умею пока такое делать, но видимо нас научат дальше, пока просто как то отметила-->
-          </div>
-          <div class="catalog-radio">
-            <strong>сетка:</strong>
-            <label><input type="radio" name="grid" value="adaptiv">Адаптивная</label>
-            <label><input type="radio" name="grid" value="fix">Фиксированная</label>
-            <label><input type="radio" name="grid" value="resin">Резиновая</label>     
-          </div>
-          <div class="catalog-checkbox">
-            <strong>особенности:</strong>
-            <label><input type="checkbox" name="check">Слайдер</label>
-            <label><input type="checkbox" name="check">Блок преимуществ</label>
-            <label><input type="checkbox" name="check">Новости</label>
-            <label><input type="checkbox" name="check">Галерея</label>
-            <label><input type="checkbox" name="check">Корзина</label>
-          </div> 
+        <form action="#" method="get">
+          <fieldset>
+            <legend>стоимость:</legend>
+            <!--НЕ ЗАБУДЬ ДОДЕЛАТЬ ЭТУ ХРЕНЬ-->
+          </fieldset>
+          <fieldset>
+            <legend>сетка:</legend>
+            <ul>
+              <li><label><input type="radio" name="grid" value="adaptiv">Адаптивная</label></li>
+              <li><label><input type="radio" name="grid" value="fix">Фиксированная</label></li>
+              <li><label><input type="radio" name="grid" value="resin">Резиновая</label></li>
+            </ul>      
+          </fieldset>
+          <fieldset>
+            <legend>особенности:</legend>
+            <ul>
+              <li><label><input type="checkbox" name="check">Слайдер</label></li>
+              <li><label><input type="checkbox" name="check">Блок преимуществ</label></li>
+              <li><label><input type="checkbox" name="check">Новости</label></li>
+              <li><label><input type="checkbox" name="check">Галерея</label></li>
+              <li><label><input type="checkbox" name="check">Корзина</label></li>
+            </ul>
+          </fieldset> 
           <input type="submit" value="показать">
         </form> 
       </aside>
@@ -94,7 +101,7 @@
           <span></span>
           <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="kvast"></a>
         </div>
-        <ul>
+        <ul class="goods-breadcrumbs">
           <li><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
