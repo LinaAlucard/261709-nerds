@@ -1,127 +1,329 @@
 body {
   font-size: 16px;
   line-height: 24px;
-  color: rgb(40,49,54);
-  font-weight: normal;
-  font-family: Roboto;
-}
-
-h1 {
-  font-size: 55px;
-  line-height: 55px;
-}
-
-h2 {
-  font-size: 45px;
-  line-height: 45px;
+  font-weight: 400;
+  font-family: "Roboto", "Arial", sans-serif;
 }
 
 .container {
   width: 1160px;
   margin: 0 auto;
-  
+  padding: 0 20px;
 }
 
-.clearfix::afther {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.main {
-  padding-bottom: 95px;
+header {
+  background-color: #eeeeee;
 }
 
 .main-nav {
-  width: 800px;
+  padding-top: 50px;
+  padding-bottom: 95px;
+}
+
+.nav-list {
   float: right;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 34px;
+}
+
+.nav-list .active {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #fb565a;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin-left: 47px;
+  font-size: 16px;
+  vertical-align: middle;
+} 
+
+.cart {
+  margin-left: 245px;
+  padding-left: 41px;
+  background: url("../img/cart-icon.png") no-repeat left center;
+}
   
+.main-nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main-logo {
-  width: 160px;
   float: left;
+  display: block;
 }
 
 .main-block {
   width: 380px;
-  min-height: 280px; /*не знаю пока нужна ли она тут*/
   float: left;
   padding-bottom: 80px;
 }
 
-.features {
+.main-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.main-block p {
+  padding-bottom: 45px;
+  color: #283136;
+}
+
+.main-block .btn {
+  width: 240px;
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 19px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background: #fb565a;
+  line-height: 18px;
+  font-weight: 500;
+  border-radius: 2px;
+  display: block;
   text-align: center;
-  font-size: 0;
-  padding-bottom: 1px;
 }
 
-.features-all {
-  padding-top: 79px;
+.slider-background {
+  float: right;
+  width: 800px;
+  min-height: 10px; /*ширина высота временная*/
+}
+
+.features-index {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
   padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
 }
 
-.features-item {
-  display: inline-block;
+.features-index-item {
+  width: 300px;
+  float: left;
   margin-right: 100px;
-  font-size: 16px;
-  vertical-align: top;
 }
 
-.features:last-child {
+.features-index-item:last-child {
   margin-right: 0;
 }
 
-.features-another {
-  padding-top: 80px;
+.features-index-item img {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.features-index-item h2 {
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.features-index-item p {
+  color: #283136;
+  font-size: 16px;
+  line-height: 24px;
+  padding-right: 20px;
+  margin-top: 25px;
+  padding-bottom: 35px; 
+}
+
+.features-index-item .btn {
+  width: 160px;
+  font-size: 16px;
+}
+
+.btn-green {
+  background-color: #00ca74;
+}
+
+.features-block {
   padding-bottom: 80px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.btn-yellow {
+  background-color: #efc84a; 
 }
 
 .features-aboutus {
   width: 660px;
-  float: left;
+  float: left; 
+  padding-top: 80px;
+}
+
+.features-aboutus h3 {
+  font-size: 45px;
+  line-height: 45px;
+  margin-bottom: 35px;
+}
+
+.features-aboutus p {
+  color: #283136;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.features-aboutus strong {
+  text-transform: uppercase; 
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 35px;
+}
+
+.features-list li {
+  color: #283136;
+  padding-left: 36px;
+  padding-bottom: 28px;
 }
 
 .features-work {
   width: 360px;
   float: right; 
+  padding-top: 40px;
 }
 
-.features-compay {
-  font-size: 0;
-  clear: both;
-  padding-top: 60px;
-  padding-bottom: 50px;
+.features-logo {
+  margin-bottom: 35px;
 }
+
+.features-work strong {
+  text-transform: uppercase; 
+}
+
+.work-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.work-list li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24px;
+}
+
+.work-list li:last-child {
+  margin-right: 0;
+}
+
+.work-list b {
+  font-size: 45px;
+}
+
+.work-list span {
+  color: #283136;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.work-list .list-block {
+  width: 95px;
+}
+
+.features-company {
+  margin-top: 35px;
+  margin-bottom: 48px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+/*не знаю как сделать верный отступ под всеми дивами с логатипчиками до бордера, нужна подсказка =) */
 
 .company {
-  display: inline-block;
-  margin right: 100px;
-  font-size: 16px;
-  vertical-align: top;
-}
-
-.features-compay:last-child {
-  margin-right: 0;
+  float: left;
 } 
 
-.map-adress {
-  width: 320px;
-  float: left;
+.company img {
+  opacity: 0.2;
+}
+
+.company-academy  {
+  margin-left: 31px;
+  margin-right: 96px;
+}
+
+.company-borodinski {
+  margin-right: 103px;
+}
+
+.company-pink {
+  margin-right: 121px;
 }
 
 .map {
-  padding-top: 80px;
-  padding-bottom: 70px;
+  background: url(../img/map.png) #e9e5dc no-repeat center center;
+  padding-bottom: 1px;
+  margin-top: 80px;
+}
+/*тут у меня явно не правильно с бекграунд имейдж с верху и снизу карты торчащий серый фон ия е не верно позиционирую как то, расположение отличается от макета*/
+
+.map-adress {
+  width: 219px;
+  float: left;
+  background: white;
+  margin-top: 53px;
+  margin-bottom: 54px;
+  margin-left: 20px;
+  padding-top: 54px;
+  padding-right: 50px;
+  padding-bottom: 47px;
+  padding-left: 50px; 
+}
+
+.map-adress  strong {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.map-adress p {
+  width: 210px;
+  color: #283136;
+}
+
+.map-adress span {
+  color: #283136;
+}
+
+.map-adress .btn {
+  margin-top: 37px;
+  width: 219px;
 }
 
 .map-marker {
-  width: ;
   float: right;
+  margin-top: 90px;
+  margin-left: 362px;
 }
 
-.footer-all {
-  padding-bottom: 80px; 
+/*яно не верно его располагаю,может лучше сделать его тоже блоком с фоном и поверх карты надложить и уж тогда позиционировать, ил именнно позиционированием его прилепить к карте?*/
+
+.footer-contact {
+  padding-top: 70px;
+  padding-bottom: 68px;
 }
 
 .footer-social {
@@ -130,66 +332,165 @@ h2 {
 }
 
 .footer-info {
-  width: 550px;
-  float: right;
-}
-
-.main-inner {
-  padding-top: 80px;
-  padding-bottom: 100px;
-}
-
-.inner-main-logo {
-  width: 160px;
+  width: 545px;
   float: left;
+  margin-left: 140px;
 }
 
-.inner-main-nav {
-  width: 800px;
-  float: right;
+.footer-contact h3 {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #283136;
 }
 
 .main-innerblock {
-  width: 720px;
-  clear: borth;
-  padding-bottom: 125px
-  margin: 0 230px; /*не уверена как центровать*/
+  margin: 0 auto;
+  width: 775px;
+  padding-top 85px;
+  padding-bottom: 117px;
 }
 
-.catalog {
-  padding-top: 70px;
-  padding-bottom: 60px;
+.main-innerblock h1 {
+  font-size: 55px;
+  line-height: 55px;
+  margin: 0;
 }
 
 aside {
-  width: 160px;
+  width: 260px;
   float: left;
+}
+
+aside legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+aside fieldset {
+  border: none;
+}
+
+aside .form-btn {
+  margin-top: 49px;
+ /*не знаю как стилизовать кнопку, или она всё же ссылка на самом деле?*/ 
 }
 
 .catalog-goods {
   width: 760px;
-  float: right; 
-  
-}
-
-.catalog-goods:nth-child(2n) {
-  margin-right: 0;
+  float: right;
 }
 
 .goods-nav {
-  /*тоже не понимаю как это правильно должно располагаться*/
+  margin-bottom: 60px;
+}
+
+.goods-nav span {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  float: left;
+  width: 134px;
+}
+
+.goods-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+  float: right;
+  width: 360px;
+}
+
+.goods-list li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 25px;
+}
+
+.goods-list li:last-child {
+  margin-right: 0;
+}
+
+.goods-list a {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.goods-list .unactive {
+  opacity: 0.3;
 }
 
 .goods-slider {
-  display: inline-block;
-  width: 360px;
+  width: 358px;
+  border: 1px solid #e9e9e9;
+  float: left;
   margin-right: 40px;
+  margin-bottom: 36px;
+}
+
+/*у меня тут какая то двойная рамка случилась, особенно это видно снизу у блока гудс-слайдер, она там ещё и с отступом, не пойму откуда взялась и как поправить*/
+
+.goods-slider:nth-child(2n) {
+  margin-right: 0;
 }
 
 .goods-breadcrumbs {
-  width: ;
-  clear: both; /*та де проблема с центрованием*/
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
 }
+
+.goods-breadcrumbs li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  border: 3px solid #eeeeee;
+  background-color: #eeeeee;
+  margin-left: 11px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.goods-breadcrumbs a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.goods-breadcrumbs .active-link {
+  background-color: #ffffff;
+}
+
+.goods-breadcrumbs .next {
+  width: 260px;
+}
+
+
+
 
 
 

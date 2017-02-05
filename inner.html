@@ -3,30 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
-    <div class="container clearfix">
-      <div class="main-inner">
-        <a htef="index.html" class="inner-main-logo"><img src="img/nerds-logo.png" width="160" height="65" alt="логотип"></a>
-        <nav class="inner-main-nav">
-          <ul>
-            <li><a href="#">студия</a></li>
-            <li><a href="#">клиенты</a></li>
-            <li><a href="#">магазин</a></li>
-            <li><a href="#">контакты</a></li>
-            <li><a href="#">корзина</a></li>
-          </ul>    
-        </nav>
-      </div>   
+    <div class="container">
+      <nav class="main-nav clearfix">
+        <a htef="index.html" class="inner-main-logo">
+          <img src="img/nerds-logo.png" width="160" height="65" alt="логотип">
+        </a>
+        <ul class="nav-list">
+          <li><a href="#">студия</a></li>
+          <li><a href="#">клиенты</a></li>
+          <li><a href="#" class="active">магазин</a></li>
+          <li><a href="#">контакты</a></li>
+          <li><a href="#" class="cart">корзина</a></li>
+        </ul>    
+      </nav> 
       <div class="main-innerblock">
-        <h1>добро пожаловать в магазин готовых макетов</h1>
+        <h1>Магазин готовых макетов</h1>
       </div>      
     </div>    
   </header>
   <div class="catalog">
-    <div class="container">
+    <div class="container clearfix">
       <aside>
         <form action="#" method="get">
           <fieldset>
@@ -51,87 +53,94 @@
               <li><label><input type="checkbox" name="check">Корзина</label></li>
             </ul>
           </fieldset> 
-          <input type="submit" value="показать">
+          <input type="submit" value="показать" class="form-btn">
         </form> 
       </aside>
       <section class="catalog-goods">
-        <div class="goods-nav">
+        <div class="goods-nav clearfix">
           <span>сортировать:</span>
-          <ul>
+          <ul class="goods-list">
             <li><a href="#">по цене</a></li>
-            <li><a href="#">по типу</a></li>
-            <li><a href="#">по функционалу</a></li>
-            <li><a href="#" class="tgray">серый треугольник</a></li>
-            <li><a href="#" class="tblack">чёрный треугольник</a></li>
+            <li><a href="#" class="unactive">по типу</a></li>
+            <li><a href="#" class="unactive">по названию</a></li>
+            <li><a href="#" class="tgray unactive">с</a></li>
+            <li><a href="#" class="tblack">ч</a></li>
           </ul>     
-        </div>  
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="sedona"></a>
-        </div> 
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="pink"></a>
         </div>
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop"></a>
-        </div>
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="mishka"></a>
-        </div>
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="alpus"></a>
-        </div>
-        <div class="goods-slider">
-          <span></span>
-          <span></span>
-          <span></span>
-          <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="kvast"></a>
+        <div class="sliders clearfix">  
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="sedona"></a>
+          </div> 
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="pink"></a>
+          </div>
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop"></a>
+          </div>
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="mishka"></a>
+          </div>
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="alpus"></a>
+          </div>
+          <div class="goods-slider">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="kvast"></a>
+          </div>
         </div>
         <ul class="goods-breadcrumbs">
-          <li><a href="#">1</a></li>
+          <li class="active-link"><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
-          <li><a href="#">следующая</a></li>
+          <li class="next"><a href="#">следующая</a></li>
         </ul>        
       </section>     
     </div>     
   </div>   
-  <div class="map">
-    <div class="container">
-      <div class="map-adress">
-        <strong>nёrds design studio</strong>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшеннаяб д. 19/8</p>
-        <span>тел. +7(812)275-75-75</span>
-        <a href="" class="btn">напишите нам</a>
-      </div>    
-    </div>  
-  </div>  
-  <footer>
-    <div class="conteiner">
-      <div class="footer-social">
-        <a href="#">Вконтакте</a>
-        <a href="#">Фейсбук</a>
-        <a href="#">Инстаграм</a>
-      </div>   
-      <div class="footer-info">
-        <h3>Давайте дружить, это выгодно!</h3>
-        <p>Скидка 10% для друзей из социальных сетей!</p>
-      </div>    
+  <footer>     
+    <div class="map clearfix">
+      <div class="container"> 
+        <div class="map-adress">
+          <strong>nёrds design studio</strong>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <span>тел. +7(812)275-75-75</span>
+          <a href="#" class="btn">напишите нам</a>
+        </div>   
+        <div class="map-marker">
+          <img src="img/map-marker.png" width="231" hight="190" alt="маркер">
+        </div> 
+      </div>
     </div>    
-  </footer>      
+    <div class="footer-contact clearfix">
+      <div class="container">
+        <div class="footer-social">
+          <a href="#">Вконтакте</a>
+          <a href="#">Фейсбук</a>
+          <a href="#">Инстаграм</a>
+        </div>   
+        <div class="footer-info">
+          <h3>Давайте дружить, это выгодно!</h3>
+          <p>Скидка 10% для друзей из социальных сетей!</p>
+        </div>
+      </div>
+    </div>          
+  </footer>     
 </body>
 </html>    
