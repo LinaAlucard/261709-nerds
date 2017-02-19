@@ -2,7 +2,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", "Verdana", sans-serif;
 }
 
 .container {
@@ -23,7 +23,6 @@ header {
 
 .main-nav {
   padding-top: 50px;
-  padding-bottom: 95px;
 }
 
 .nav-list {
@@ -31,22 +30,33 @@ header {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  padding-top: 34px;
+  font-size: 0;
+  padding-top: 25px;
 }
 
-.nav-list .active {
+.nav-list .active  {
   padding-bottom: 13px;
   border-bottom: 2px solid #fb565a;
 }
 
 .nav-list li {
   display: inline-block;
-  margin-left: 47px;
+  margin-left: 45px;
   font-size: 16px;
+  line-height: 30px; 
+  font-weight: 500;
   vertical-align: middle;
 } 
 
-.cart {
+.nav-list a:not(.active):hover {
+  color: #fb565a;
+}
+
+.nav-list a:not(.active):active {
+  color: #a6a6a6;
+}
+
+.nav-list .cart {
   margin-left: 245px;
   padding-left: 41px;
   background: url("../img/cart-icon.png") no-repeat left center;
@@ -54,55 +64,160 @@ header {
   
 .main-nav a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .main-logo {
   float: left;
+}
+
+.main-logo img {
   display: block;
 }
 
-.main-block {
-  width: 380px;
-  float: left;
-  padding-bottom: 80px;
+.slider {
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
 }
 
-.main-title {
+.slider-controls {
+  position: absolute;
+  bottom: 94px;
+  left: 581px;
+  height: 20px;
+  text-align: center;
+  z-index: 1000;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 0;
+}
+
+.slider-controls a {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls a:not(:last-of-type) {
+  margin-right: 17px;
+}
+
+.slider-controls a.active::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #c1c1c1;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.slide {
+  overflow: hidden;
+}
+
+.slider-block {
+  float: left;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.slider .slide1 {
+  width: 380px;
+}
+
+.slider .slide2 {
+  width: 515px;
+}
+
+.slider .slide3 {
+  width: 415px;
+}
+
+.slider-title {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+  margin-bottom: 25px;
 }
 
-.main-block p {
-  padding-bottom: 45px;
+.slider-block p {
+  margin: 0px;
+  margin-bottom: 38px;
   color: #283136;
 }
-
-.main-block .btn {
+  
+.sliders .btn {
   width: 240px;
-  margin-top: 35px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 .btn {
   padding: 19px 0;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
-  background: #fb565a;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   display: block;
   text-align: center;
 }
 
-.slider-background {
-  float: right;
-  width: 800px;
-  min-height: 10px; /*ширина высота временная*/
+.btn-red {
+  color: #ffffff;
+  background: #fb565a;
+}
+
+.btn-red:hover {
+  background: #e74246;
+} 
+
+.btn-red:active {
+  background: #d7373b;
+  -webkit-box-shadow: inset 0 3px #c13135;
+  box-shadow: inset 0 3px #c13135;
+  color: rgba(255,255,255,.3); 
+}
+
+.slide {
+  display: none;
+}
+
+.slide:nth-child(1) {
+  display: block;
+  background-image: url("../img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 432px 100%; /*спозиционировать правильно*/
+}
+
+.slide:nth-child(2) {
+  background-image: url("../img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%; /*спозиционировать правильно*/
+}
+
+.slide:nth-child(3) {
+  background-image: url("../img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%; /*спозиционировать правильно*/
 }
 
 .features-index {
@@ -126,7 +241,7 @@ header {
 
 .features-index-item img {
   display: block;
-  margin-bottom: 23px;
+  margin-bottom: 26px;
 }
 
 .features-index-item h2 {
@@ -141,44 +256,71 @@ header {
   font-size: 16px;
   line-height: 24px;
   padding-right: 20px;
-  margin-top: 25px;
-  padding-bottom: 35px; 
+  margin-top: 15px;
+  margin-bottom: 34px;
 }
 
 .features-index-item .btn {
   width: 160px;
   font-size: 16px;
+  padding: 16px  0;
+
 }
 
 .btn-green {
   background-color: #00ca74;
+  color: #ffffff;
+}
+
+.btn-green:hover {
+  background: #00bc6c;
+} 
+
+.btn-green:active {
+  background: #00aa62;
+  -webkit-box-shadow: inset 0 3px #009958;
+  box-shadow: inset 0 3px #009958;
 }
 
 .features-block {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
 }
 
 .btn-yellow {
   background-color: #efc84a; 
+  color: #ffffff;
+}
+
+.btn-yellow:hover {
+  background: #eab534;
+} 
+
+.btn-yellow:active {
+  background: #e5a722;
+  -webkit-box-shadow: inset 0 3px #ce961f;
+  box-shadow: inset 0 3px #ce961f;
 }
 
 .features-aboutus {
   width: 660px;
-  float: left; 
-  padding-top: 80px;
+  float: left;
+  margin-top: 73px;
 }
+
 
 .features-aboutus h3 {
   font-size: 45px;
   line-height: 45px;
-  margin-bottom: 35px;
+  font-weight: 500;
+  margin-bottom: 33px;
+  margin-top: 0px;
 }
 
 .features-aboutus p {
   color: #283136;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 39px;
 }
 
 .features-aboutus strong {
@@ -189,13 +331,22 @@ header {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-top: 35px;
+  margin-top: 23px;
 }
 
 .features-list li {
   color: #283136;
-  padding-left: 36px;
-  padding-bottom: 28px;
+  margin-bottom: 25px;
+}
+
+.features-list li::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background: #fb565a;
+  margin-right: 11px;
+  vertical-align: middle;
 }
 
 .features-work {
@@ -205,7 +356,7 @@ header {
 }
 
 .features-logo {
-  margin-bottom: 35px;
+  margin-bottom: 29px;
 }
 
 .features-work strong {
@@ -238,56 +389,109 @@ header {
   color: #283136;
   font-size: 16px;
   line-height: 18px;
+  display: block;
+  margin-top: 13px;
 }
 
 .work-list .list-block {
   width: 95px;
 }
 
-.features-company {
-  margin-top: 35px;
-  margin-bottom: 48px;
-  border-bottom: 2px solid #eeeeee;
+.list-block sup {
+  font-size: 27px;
+  line-height: 35px;
+  font-weight: 700;
 }
 
-/*не знаю как сделать верный отступ под всеми дивами с логатипчиками до бордера, нужна подсказка =) */
+.features-company {
+  border-bottom: 2px solid #eeeeee;
+  position: relative;
+}
 
 .company {
   float: left;
+  height: 180px;
 } 
+
+.company img:hover {
+  opacity: 1;
+}
+
+.company img:active {
+  opacity: 0.1;
+}
 
 .company img {
   opacity: 0.2;
 }
 
-.company-academy  {
-  margin-left: 31px;
-  margin-right: 96px;
+.company.company-academy,
+.company.company-mishka {
+  width: 280px;
+}
+.company.company-borodinski,
+.company.company-pink {
+  width: 300px;
 }
 
-.company-borodinski {
-  margin-right: 103px;
+.company:not(:last-of-type)::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 52px;
+  background: #eeeeee;
+  position: absolute;
+  top: 64px;
 }
 
-.company-pink {
-  margin-right: 121px;
+.company-academy img {
+  -webkit-transform: translate(31px, 62px);
+  -ms-transform: translate(31px, 62px);
+  transform: translate(31px, 62px);
+}
+
+.company-borodinski img {
+  -webkit-transform: translate(46px, 46px);
+  -ms-transform: translate(46px, 46px);
+  transform: translate(46px, 46px);
+}
+
+.company-pink img {
+  -webkit-transform: translate(58px, 65px);
+  -ms-transform: translate(58px, 65px);
+  transform: translate(58px, 65px);
+}
+
+.company-mishka img {
+  -webkit-transform: translate(64px, 52px);
+  -ms-transform: translate(64px, 52px);
+  transform: translate(64px, 52px);
+}
+
+.company-academy::after {
+  left: 280px;
+}
+
+.company-borodinski::after {
+  left: 580px;
+}
+
+.company-pink::after {
+  left: 880px;
 }
 
 .map {
-  background: url(../img/map.png) #e9e5dc no-repeat center center;
-  padding-bottom: 1px;
-  margin-top: 80px;
+  background: url(../img/map.jpg) #e9e5dc no-repeat center center;
+  padding-top: 54px;
+  padding-bottom: 54px;
 }
-/*тут у меня явно не правильно с бекграунд имейдж с верху и снизу карты торчащий серый фон ия е не верно позиционирую как то, расположение отличается от макета*/
 
 .map-adress {
   width: 219px;
   float: left;
   background: white;
-  margin-top: 53px;
-  margin-bottom: 54px;
   margin-left: 20px;
-  padding-top: 54px;
+  padding-top: 48px;
   padding-right: 50px;
   padding-bottom: 47px;
   padding-left: 50px; 
@@ -300,6 +504,9 @@ header {
 }
 
 .map-adress p {
+  margin: 0;
+  margin-top: 27px;
+  margin-bottom: 22px;
   width: 210px;
   color: #283136;
 }
@@ -309,17 +516,13 @@ header {
 }
 
 .map-adress .btn {
-  margin-top: 37px;
+  margin-top: 36px;
   width: 219px;
 }
 
 .map-marker {
   float: right;
-  margin-top: 90px;
-  margin-left: 362px;
 }
-
-/*яно не верно его располагаю,может лучше сделать его тоже блоком с фоном и поверх карты надложить и уж тогда позиционировать, ил именнно позиционированием его прилепить к карте?*/
 
 .footer-contact {
   padding-top: 70px;
@@ -329,6 +532,61 @@ header {
 .footer-social {
   width: 260px;
   float: left;
+  font-size: 0;
+}
+
+.footer-social .social {
+  display: inline-block;
+  width: 79px;
+  height: 79px;
+  background-color: #e1e1e1;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 11px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.footer-social .social::after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-image: url("../img/social-sprite.png");
+}
+
+.footer-social .social:last-child {
+  margin-right: 0;
+}
+
+.footer-social .social:hover {
+  background-color: #e74246;
+}
+
+.footer-social .social:active {
+  background-color: #d7373b;
+  -webkit-box-shadow: inset 0 3px #c13135;
+  box-shadow: inset 0 3px #c13135; 
+}
+
+.footer-social .social:active::after {
+  opacity: 0.3;
+}
+
+.footer-social .social-vk::after {
+  background-position: -140px 26px;
+}
+
+.footer-social .social-fb::after {
+  background-position: -60px 26px;
+}
+
+.footer-social .social-inst::after {
+  background-position: 20px 26px;
 }
 
 .footer-info {
@@ -351,7 +609,7 @@ header {
 .main-innerblock {
   margin: 0 auto;
   width: 775px;
-  padding-top 85px;
+  padding-top: 85px;
   padding-bottom: 117px;
 }
 
@@ -361,15 +619,115 @@ header {
   margin: 0;
 }
 
+.main-logo:hover {
+  opacity: 0.8;
+}
+
+.main-logo:active {
+  opacity: 0.3;
+}
+
 aside {
   width: 260px;
   float: left;
+}
+
+aside fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+.range-filter {
+  width: 240px;
+}
+
+.range label {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+  border: 8px solid #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ababab;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 145px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  font-size: 16px;
+  display: inline-block;
+  width: 50%;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  width: 60px;
+  margin-left: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #f1f1f1;
 }
 
 aside legend {
   font-size: 18px;
   line-height: 30px;
   font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 40px;
 }
 
 aside ul {
@@ -378,13 +736,82 @@ aside ul {
   list-style-type: none;
 }
 
+aside ul li {
+  line-height: 40px;
+}
+
 aside fieldset {
   border: none;
 }
 
-aside .form-btn {
-  margin-top: 49px;
- /*не знаю как стилизовать кнопку, или она всё же ссылка на самом деле?*/ 
+aside .inner-btn {
+  margin-top: 49px; 
+  width: 260px;
+  background: #eeeeee;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+aside .inner-btn:hover {
+  background: #dfdfdf;
+}
+
+aside .inner-btn:active {
+  background: #d5d5d5;
+  -webkit-box-shadow: inset 0 3px #bfbfbf;
+  box-shadow: inset 0 3px #bfbfbf;
+  color: rgba(0,0,0,.3);
+}
+
+.layouttype label {
+  display: inline-block;
+  cursor: pointer;
+  
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #283136;
+}
+
+.layouttype input[type=radio],
+.features-checkboxes input[type=checkbox]
+{
+  display: none;
+}
+
+.layouttype input[type="radio"]+label::before,
+.features-checkboxes input[type="checkbox"]+label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background-image: url("../img/spritesheet.png");
+  background-position: 65px 30px;
+  opacity: 0.4;
+  vertical-align: middle; 
+}
+
+.layouttype input[type="radio"]+label::before {
+  background-position: 65px 30px;
+}
+
+.layouttype input[type="radio"]:checked+label::before {
+  background-position: 30px 30px;
+}
+
+.features-checkboxes input[type="checkbox"]+label::before {
+  background-position: -5px 30px;
+}
+
+.features-checkboxes input[type="checkbox"]:checked+label::before {
+  background-position: 101px 30px;
+}
+
+.layouttype input[type="radio"]+label:hover::before,
+.features-checkboxes input[type="checkbox"]+label:hover::before {
+  opacity: 1;
 }
 
 .catalog-goods {
@@ -392,8 +819,13 @@ aside .form-btn {
   float: right;
 }
 
-.goods-nav {
-  margin-bottom: 60px;
+.column-heading {
+  height: 135px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 60px;
+  text-transform: uppercase;
 }
 
 .goods-nav span {
@@ -428,26 +860,113 @@ aside .form-btn {
   line-height: 18px;
   font-weight: 400;
   text-decoration: none;
-  color: black;
+  color: #cccccc;
   text-transform: uppercase;
 }
 
-.goods-list .unactive {
-  opacity: 0.3;
+.goods-list a:not(.active):hover {
+  color: #999999;
+}
+
+.goods-list a:not(.active):active {
+  color: #000000;
+}
+
+.goods-list .active {
+  color: #000000;
+}
+
+.goods-list .arrow-up {
+  width: 0px;
+  height: 0px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 9px solid #cccccc;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+
+.goods-list .arrow-down {
+  -webkit-transform: translateY(-4px) rotate(180deg);
+  -ms-transform: translateY(-4px) rotate(180deg);
+  transform: translateY(-4px) rotate(180deg);
+  
+}
+
+.goods-list .tactive {
+  border-top-color: #000000;
+}
+
+.goods-list .arrow-up:not(.tactive):hover {
+  border-top-color: #999999;
+}
+
+.goods-list .arrow-up:not(.tactive):active {
+  border-top-color: #000000;
 }
 
 .goods-slider {
-  width: 358px;
-  border: 1px solid #e9e9e9;
+  width: 360px;
   float: left;
-  margin-right: 40px;
+  margin-right: 36px;
   margin-bottom: 36px;
+  position: relative;
 }
 
-/*у меня тут какая то двойная рамка случилась, особенно это видно снизу у блока гудс-слайдер, она там ещё и с отступом, не пойму откуда взялась и как поправить*/
+.goods-slider .goods-img {
+  border: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .goods-slider:nth-child(2n) {
   margin-right: 0;
+}
+
+.goods-slider img {
+  display: block;
+}
+
+.goods-slider .info-hover {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 240px;
+  padding: 0 60px;
+  text-align: center;
+
+  background: #eeeeee;
+}
+
+.info-hover div {
+  margin-top: 35px;
+  margin-bottom: 23px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.info-hover p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  padding: 0;
+}
+
+.info-hover .btn {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width: 200px;
+}
+
+.goods-slider:hover>div.info-hover {
+  display: block;
 }
 
 .goods-breadcrumbs {
@@ -457,28 +976,40 @@ aside .form-btn {
   list-style-type: none;
 }
 
-.goods-breadcrumbs li {
+.goods-breadcrumbs li {  
   display: inline-block;
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 2px;
-  border: 3px solid #eeeeee;
-  background-color: #eeeeee;
-  margin-left: 11px;
-  line-height: 50px;
-  text-align: center;
 }
 
 .goods-breadcrumbs a {
+  display: block;
+  padding: 16px 18px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 3px solid #eeeeee;
+  background-color: #eeeeee;
+  margin-right: 11px;
+  line-height: 50px;
+  text-align: center;
   text-decoration: none;
   color: black;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  vertical-align: middle;
   display: inline-block;
+  vertical-align: middle;
+}
+
+.goods-breadcrumbs a:not(.active-link):hover {
+  background: #dfdfdf;
+  border-color:#dfdfdf;
+}
+
+.goods-breadcrumbs a:not(.active-link):active {
+  background: #d5d5d5;
+  border-color: #d5d5d5;
+  border-top-color: #bfbfbf;
 }
 
 .goods-breadcrumbs .active-link {
@@ -487,6 +1018,144 @@ aside .form-btn {
 
 .goods-breadcrumbs .next {
   width: 260px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 13px;
+}
+
+footer {
+  margin-top: 80px;
+}
+
+.modal-writeus {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-writeus .modal-content {
+  background: #ffffff;
+  padding: 70px 100px 78px;
+  -webkit-box-shadow: 0 0 40px 0 #000000;
+  box-shadow: 0 0 40px 0 #000000; 
+  width: 761px;
+  margin: 5% auto;
+}
+
+.modal-content .modal-title {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  margin-bottom: 47px;
+}
+
+.modal-inputs {
+  margin-bottom: 35px;
+}
+
+.modal-inputs>label:first-of-type {
+  float: left;
+}
+
+.modal-inputs>label:last-of-type {
+  float: right;
+}
+
+.modal-inputs>label input {
+  margin-top: 11px;
+  width: 360px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.modal-content label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.modal-content input {
+  padding: 15px;
+  padding-right: 0;
+  border: 2px solid #d7dcde; 
+  -webkit-border-radius: 2px; 
+  border-radius: 2px;
+}
+
+.modal-content textarea {
+  overflow: auto;
+  resize: none;
+  width: 760px;
+  height: 118px;
+  padding: 15px;
+  border: 2px solid #d7dcde;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #a1a1a1;
+  margin-bottom: 50px;
+} 
+
+.modal-content input:hover,
+.modal-content textarea:hover {
+  border-color: #b4b9bb;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #000000;
+  color: #000000;
+}
+
+.modal-inputs input:invalid {
+  border-color: #e74347;
+  color: #e74246;
+}
+
+.modal-content placeholder 
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #a1a1a1;
+}
+
+.modal-content button {
+  border: none;
+  outline: none;
+  padding: 18px 84px;
+}
+
+.modal-content .exit {
+  float: right;
+  width: 21px;
+  height: 21px;
+  background: -webkit-linear-gradient(top right, transparent -webkit-calc(50% - 3px), #fecccd -webkit-calc(50% - 2px), #fecccd -webkit-calc(50% + 2px), transparent -webkit-calc(50% + 3px)) no-repeat ,
+  -webkit-linear-gradient(top left, transparent -webkit-calc(50% - 3px), #fecccd -webkit-calc(50% - 2px), #fecccd -webkit-calc(50% + 2px), transparent -webkit-calc(50% + 3px)) no-repeat;
+  background: linear-gradient(to bottom left, transparent calc(50% - 3px), #fecccd calc(50% - 2px), #fecccd calc(50% + 2px), transparent calc(50% + 3px)) no-repeat ,
+  linear-gradient(to bottom right, transparent calc(50% - 3px), #fecccd calc(50% - 2px), #fecccd calc(50% + 2px), transparent calc(50% + 3px)) no-repeat;
+  -webkit-transform: translateX(11px);
+  -ms-transform: translateX(11px);
+  transform: translateX(11px);
+}
+
+.modal-content .exit:hover {
+  background: -webkit-linear-gradient(top right, transparent -webkit-calc(50% - 3px), #fb565a -webkit-calc(50% - 2px), #fb565a -webkit-calc(50% + 2px), transparent -webkit-calc(50% + 3px)) no-repeat ,
+  -webkit-linear-gradient(top left, transparent -webkit-calc(50% - 3px), #fb565a -webkit-calc(50% - 2px), #fb565a -webkit-calc(50% + 2px), transparent -webkit-calc(50% + 3px)) no-repeat;
+  background: linear-gradient(to bottom left, transparent calc(50% - 3px), #fb565a calc(50% - 2px), #fb565a calc(50% + 2px), transparent calc(50% + 3px)) no-repeat ,
+  linear-gradient(to bottom right, transparent calc(50% - 3px), #fb565a calc(50% - 2px), #fb565a calc(50% + 2px), transparent calc(50% + 3px)) no-repeat;
+}
+
+.modal-content .exit:active {
+  opacity: 0.1;
 }
 
 

@@ -4,112 +4,166 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <div class="container">
       <nav class="main-nav clearfix">
-        <a htef="index.html" class="inner-main-logo">
+        <a href="index.html" class="main-logo">
           <img src="img/nerds-logo.png" width="160" height="65" alt="логотип">
         </a>
         <ul class="nav-list">
           <li><a href="#">студия</a></li>
           <li><a href="#">клиенты</a></li>
-          <li><a href="#" class="active">магазин</a></li>
+          <li><a class="active">магазин</a></li>
           <li><a href="#">контакты</a></li>
-          <li><a href="#" class="cart">корзина</a></li>
+          <li class="cart"><a href="#">корзина</a></li>
         </ul>    
       </nav> 
       <div class="main-innerblock">
         <h1>Магазин готовых макетов</h1>
       </div>      
-    </div>    
+    </div>   
   </header>
   <div class="catalog">
     <div class="container clearfix">
       <aside>
-        <form action="#" method="get">
-          <fieldset>
-            <legend>стоимость:</legend>
-            <!--НЕ ЗАБУДЬ ДОДЕЛАТЬ ЭТУ ХРЕНЬ-->
+        <form action="inner.php" method="get">
+          <fieldset class="range">
+            <legend class="column-heading">стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="layouttype">
             <legend>сетка:</legend>
             <ul>
-              <li><label><input type="radio" name="grid" value="adaptiv">Адаптивная</label></li>
-              <li><label><input type="radio" name="grid" value="fix">Фиксированная</label></li>
-              <li><label><input type="radio" name="grid" value="resin">Резиновая</label></li>
+              <li>
+                <input id="layoutadaptiveradio" type="radio" name="grid" value="adaptiv">
+                <label for="layoutadaptiveradio">Адаптивная</label>
+              </li>
+              <li>
+                <input id="layoutfix" type="radio" name="grid" value="fix">
+                <label for="layoutfix">Фиксированная</label>
+              </li>
+              <li>
+                <input id="layoutresin" type="radio" name="grid" value="resin">
+                <label for="layoutresin">Резиновая</label>
+              </li>
             </ul>      
           </fieldset>
-          <fieldset>
+          <fieldset  class="features-checkboxes">
             <legend>особенности:</legend>
             <ul>
-              <li><label><input type="checkbox" name="check">Слайдер</label></li>
-              <li><label><input type="checkbox" name="check">Блок преимуществ</label></li>
-              <li><label><input type="checkbox" name="check">Новости</label></li>
-              <li><label><input type="checkbox" name="check">Галерея</label></li>
-              <li><label><input type="checkbox" name="check">Корзина</label></li>
+              <li>
+                <input id="feature-slider" type="checkbox" name="check">
+                <label for="feature-slider">Слайдер</label>
+              </li>
+              <li>
+                <input id="feature-block" type="checkbox" name="check">
+                <label for="feature-block">Блок преимуществ</label>
+              </li>
+              <li>
+                <input id="feature-news" type="checkbox" name="check">
+                <label for="feature-news">Новости</label>
+              </li>
+              <li>
+                <input id="feature-gallery" type="checkbox" name="check" checked>
+                <label for="feature-gallery">Галерея</label>
+              </li>
+              <li>
+                <input id="feature-bin" type="checkbox" name="check">
+                <label for="feature-bin">Корзина</label>
+              </li>
             </ul>
           </fieldset> 
-          <input type="submit" value="показать" class="form-btn">
+          <button class="btn inner-btn">показать</button> 
         </form> 
       </aside>
       <section class="catalog-goods">
-        <div class="goods-nav clearfix">
+        <div class="goods-nav column-heading clearfix">
           <span>сортировать:</span>
           <ul class="goods-list">
-            <li><a href="#">по цене</a></li>
-            <li><a href="#" class="unactive">по типу</a></li>
-            <li><a href="#" class="unactive">по названию</a></li>
-            <li><a href="#" class="tgray unactive">с</a></li>
-            <li><a href="#" class="tblack">ч</a></li>
+            <li><a class="active">по цене</a></li>
+            <li><a href="#">по типу</a></li>
+            <li><a href="#">по названию</a></li>
+            <li><a href="#"><div class="arrow-up tactive"></div></a></li>
+            <li><a href="#"><div class="arrow-up arrow-down"></div></a></li>
           </ul>     
         </div>
-        <div class="sliders clearfix">  
+        <div class="sliders clearfix"> 
           <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="sedona"></a>
-          </div> 
-          <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="pink"></a>
+            <img src="img/browser.png" width="360" height="40" alt="плашка">
+            <a href="#"><img src="img/img-sedona.jpg" width="360" height="576" alt="sedona" class="goods-img"></a>
+            <div class="info-hover">
+              <div>Sedona</div>
+              <p>Информационный сайт для туристов</p>
+              <a href="#" class="btn btn-red">9 990 руб.</a>
+            </div>
           </div>
           <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop"></a>
+            <img src="img/browser.png" width="360" height="40" alt="плашка">
+            <a href="#"><img src="img/img-pink.jpg" width="360" height="576" alt="pink" class="goods-img"></a>
+            <div class="info-hover">
+              <div>Pink App</div>
+              <p>Продуктовый лендинг приложения для iOs и Android</p>
+              <a href="" class="btn btn-red">9 900 руб.</a>
+            </div>
           </div>
           <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="mishka"></a>
+            <img src="img/browser.png" width="360" height="40" alt="плашка"> 
+            <a href="#"><img src="img/img-barbershop.jpg" width="360" height="576" alt="barbershop" class="goods-img"></a>
+            <div class="info-hover">
+              <div>Barbershop</div>
+              <p>Сайт салона красоты.<br> Для мужчин, да.</p>
+              <a href="" class="btn btn-red">9 900 руб.</a>
+            </div>
           </div>
           <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="alpus"></a>
+            <img src="img/browser.png" width="360" height="40" alt="плашка">
+            <a href="#"><img src="img/img-mishka.jpg" width="360" height="576" alt="mishka" class="goods-img"></a>
+            <div class="info-hover">
+              <div>Mishka</div>
+              <p>Интернет-магазин<br> вязаных игрушек</p>
+              <a href="" class="btn btn-red">9 900 руб.</a>
+            </div>
           </div>
           <div class="goods-slider">
-            <span></span>
-            <span></span>
-            <span></span>
-            <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="kvast"></a>
+            <img src="img/browser.png" width="360" height="40" alt="плашка">
+            <a href="#"><img src="img/img-aplus.jpg" width="360" height="576" alt="alpus" class="goods-img"></a>
+            <div class="info-hover">
+              <div>A Plus</div>
+              <p>Лендинг курсов повышения квалификации</p>
+              <a href="" class="btn btn-red">9 990 руб.</a>
+            </div>
+          </div>
+          <div class="goods-slider">
+            <img src="img/browser.png" width="360" height="40" alt="плашка">
+            <a href="#"><img src="img/img-kvast.jpg" width="360" height="576" alt="kvast" class="goods-img"></a>
+            <div class="info-hover">
+              <div>Кваст</div>
+              <p>Промо-сайт производителя краафтового кваса</p>
+              <a href="" class="btn btn-red">9 990 руб.</a>
+            </div>
           </div>
         </div>
         <ul class="goods-breadcrumbs">
-          <li class="active-link"><a href="#">1</a></li>
+          <li><a href="#" class="active-link">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
-          <li class="next"><a href="#">следующая</a></li>
+          <li><a href="#" class="next">следующая</a></li>
         </ul>        
       </section>     
     </div>     
@@ -121,19 +175,42 @@
           <strong>nёrds design studio</strong>
           <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <span>тел. +7(812)275-75-75</span>
-          <a href="#" class="btn">напишите нам</a>
+          <a class="btn btn-red">напишите нам</a>
         </div>   
         <div class="map-marker">
-          <img src="img/map-marker.png" width="231" hight="190" alt="маркер">
+          <img src="img/map-marker.png" width="231" height="190" alt="маркер">
+        </div>
+         <div class="modal-writeus">
+          <div class="modal-content">
+            <div class="exit"></div>
+            <form action="#" method="post">
+              <div class="modal-title">Напишите нам</div>
+              <div class="modal-inputs clearfix">
+                <label>Ваше имя:
+                  <br>
+                  <input type="text" name="name" placeholder="Представьтесь, пожалуйста" pattern="^[А-Яа-яЁё\s]+$" autofocus>
+                </label>
+                <label>Ваш e-mail:
+                  <br>
+                  <input type="email" name="email" placeholder="Для отправки ответа" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+                </label>
+              </div>
+              <label class="modal-textarea">Текст письма:
+                <br>
+                <textarea placeholder="В свободной форме"></textarea>
+              </label>
+            </form>
+            <button class="btn btn-red">отправить</button>
+          </div>  
         </div> 
       </div>
     </div>    
     <div class="footer-contact clearfix">
       <div class="container">
         <div class="footer-social">
-          <a href="#">Вконтакте</a>
-          <a href="#">Фейсбук</a>
-          <a href="#">Инстаграм</a>
+          <a href="#" class="social social-vk"></a>
+          <a href="#" class="social social-fb"></a>
+          <a href="#" class="social social-inst"></a>
         </div>   
         <div class="footer-info">
           <h3>Давайте дружить, это выгодно!</h3>
@@ -141,6 +218,7 @@
         </div>
       </div>
     </div>          
-  </footer>     
+  </footer> 
+  <script src="js/script.js"></script>     
 </body>
 </html>    
